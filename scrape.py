@@ -6,7 +6,7 @@ def scrape_quotes():
         browser = p.chromium.launch(headless=True, channel="chrome")
         page = browser.new_page()
         result = 0
-        for index in range(69, 78):
+        for index in range(69, 79):
             page.goto(f"https://sanand0.github.io/tdsdata/js_table/?seed={index}")
             quotes = page.query_selector("#table")
             values = quotes.inner_text()
